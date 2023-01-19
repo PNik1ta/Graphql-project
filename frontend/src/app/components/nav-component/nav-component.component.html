@@ -1,0 +1,13 @@
+<ul class="nav nav-pills mb-3">
+  <li class="nav-item" *ngFor="let item of menu">
+    <a
+      [routerLink]="item.href"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+      class="nav-link"
+    >
+      <app-icon [icon]="item.icon"></app-icon>
+      {{item.title}}
+    </a>
+  </li>
+</ul>
